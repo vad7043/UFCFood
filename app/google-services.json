@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1053220121956",
+    "firebase_url": "https://ufc-food.firebaseio.com",
+    "project_id": "ufc-food",
+    "storage_bucket": "ufc-food.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053220121956:android:fe107cf5f0d6991516de71",
+        "android_client_info": {
+          "package_name": "com.example.apptrain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053220121956-h8ja6evd83roj1380poe3d0qp8tr970v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.apptrain",
+            "certificate_hash": "1c21b0b22458c67244755013cb058ea9e968acfc"
+          }
+        },
+        {
+          "client_id": "1053220121956-tudkcr3vmr4894phidobbcll4nr53bep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7TfAMFZi_93-0UeMhCWJweMkQCyt15t8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053220121956-tudkcr3vmr4894phidobbcll4nr53bep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
