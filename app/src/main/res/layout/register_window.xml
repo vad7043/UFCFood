@@ -25,11 +25,22 @@
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:hint="Email"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:id="@+id/email_field"
+            app:met_minCharacters="2"
+            app:met_maxCharacters="20"
+            />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:hint="Пароль"
             android:textSize="20dp"
             android:textColor="@color/colorPrimary"
             android:textColorHint="@color/colorPrimaryDark"
-            android:id="@+id/password"
+            android:id="@+id/password_field"
             app:met_minCharacters="8"
             app:met_maxCharacters="20"
             />
