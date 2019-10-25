@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +22,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class MainActivity extends AppCompatActivity {
@@ -104,9 +106,23 @@ public class MainActivity extends AppCompatActivity {
                                         if(task.isSuccessful()){
                                             Intent intent = new Intent(MainActivity.this,ShowCase.class);
                                             startActivity(intent);
-                                        }
-                                        else{
 
+                                        }
+                                        else if(task.getException().getMessage() == "The email address is already in use by another account."){
+                                            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                                            builder.setTitle("Пользователь с таким Email уже существует")
+                                                    .setCancelable(false)
+                                                    .setNegativeButton("ОК",
+                                                            new DialogInterface.OnClickListener() {
+                                                                public void onClick(DialogInterface dialog, int id) {
+                                                                    dialog.cancel();
+                                                                }
+                                                            });
+                                            AlertDialog alert = builder.create();
+                                            alert.show();
+                                        }
+                                        else
+                                            {
                                             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                                             builder.setTitle("Некорректно введён Email")
                                                     .setCancelable(false)
