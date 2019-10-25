@@ -3,4 +3,8 @@
     <string name="delivery_name">UFC Food</string>
     <string name="sign_in">Войти</string>
     <string name="register">Зарегистрироваться</string>
+    <string name="title_activity_show_case">ShowCase</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
