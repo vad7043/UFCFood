@@ -12,22 +12,15 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.example.apptrain.Models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class MainActivity extends AppCompatActivity {
@@ -114,13 +107,23 @@ public class MainActivity extends AppCompatActivity {
                                         }
                                         else{
 
-                                            // Toast.makeText(MainActivity.this,"Erorr Login",Toast.LENGTH_SHORT).show();
+                                            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                                            builder.setTitle("Некорректно введён Email")
+                                                    .setCancelable(false)
+                                                    .setNegativeButton("ОК",
+                                                            new DialogInterface.OnClickListener() {
+                                                                public void onClick(DialogInterface dialog, int id) {
+                                                                    dialog.cancel();
+                                                                }
+                                                            });
+                                            AlertDialog alert = builder.create();
+                                            alert.show();
                                         }
                                     }
                                 });
                     }
                     catch (Exception e){
-
+                        Toast.makeText(MainActivity.this,"Ошибка: "+ e,Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -191,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
                                 });
                     }
                     catch (Exception e){
-
+                        Toast.makeText(MainActivity.this,"Ошибка: "+ e,Toast.LENGTH_LONG).show();
                     }
                 }
             }

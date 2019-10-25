@@ -4,7 +4,7 @@
     <string name="sign_in">Войти</string>
     <string name="register">Зарегистрироваться</string>
     <string name="title_activity_show_case">ShowCase</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_menu">Меню</string>
+    <string name="title_account">Аккаунт</string>
+    <string name="title_cart">Корзина</string>
 </resources>
