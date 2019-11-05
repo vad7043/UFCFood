@@ -19,15 +19,19 @@ public class MenuFragment extends Fragment {
     private MenuViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+                             final ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
                 ViewModelProviders.of(this).get(MenuViewModel.class);
         View root = inflater.inflate(R.layout.fragment_menu, container, false);
-        final TextView textView = root.findViewById(R.id.text_menu);
+        final TextView name = root.findViewById(R.id.text_name);
+        final TextView desc = root.findViewById(R.id.text_desc);
+        final TextView pathToImg = root.findViewById(R.id.text_pathToImg);
+        final TextView count = root.findViewById(R.id.text_count);
+        final TextView price = root.findViewById(R.id.text_price);
         homeViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
+                name.setText(s);
             }
         });
         return root;

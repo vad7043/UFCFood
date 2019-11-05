@@ -22,7 +22,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class MainActivity extends AppCompatActivity {
